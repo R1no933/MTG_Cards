@@ -6,14 +6,21 @@
 //
 
 import UIKit
+import Alamofire
 
 class MTGViewController: UIViewController {
     //MARK: - Properties
+    private var cards: [Card] = []
+    private let url = "https://api.magicthegathering.io/v1/cards"
+    
     lazy var cardsTableView: UITableView = {
         let tableView = UITableView()
         
-        tableView.backgroundColor = .systemPink
+        tableView.register(MTGCell.self, forCellReuseIdentifier: MTGCell.identifire)
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.keyboardDismissMode = .onDrag
         
         return tableView
     }()
@@ -23,6 +30,7 @@ class MTGViewController: UIViewController {
         super.viewDidLoad()
         configureView()
         configureSearchController()
+        getCardsList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,10 +59,39 @@ class MTGViewController: UIViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
     }
-    
-    //MARK: - Objc methods
-    @objc func searchButtonTapped() {
-        
-    }
 }
 
+extension MTGViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cards.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = cardsTableView.dequeueReusableCell(withIdentifier: MTGCell.identifire) as! MTGCell
+        let card = cards[indexPath.row]
+        cell.set(cards: card)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    
+}
+
+//MARK: - Extensions
+//Network call
+extension MTGViewController {
+    func getCardsList() {
+        AF.request(url)
+            .validate()
+            .responseDecodable(of: Cards.self) { responce in
+                guard let data = responce.value else { return }
+                let cards = data.cards
+                self.cards = cards
+                self.cardsTableView.reloadData()
+            }
+    }
+}

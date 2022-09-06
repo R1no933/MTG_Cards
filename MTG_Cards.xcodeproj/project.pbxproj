@@ -12,9 +12,44 @@
 		B778A4D928C79F45009F29F5 /* MTGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4D828C79F45009F29F5 /* MTGViewController.swift */; };
 		B778A4DE28C79F48009F29F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B778A4DD28C79F48009F29F5 /* Assets.xcassets */; };
 		B778A4E128C79F48009F29F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B778A4DF28C79F48009F29F5 /* LaunchScreen.storyboard */; };
-		B778A4F228C7AA91009F29F5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4F128C7AA91009F29F5 /* Card.swift */; };
-		B778A4F428C7AA9B009F29F5 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4F328C7AA9B009F29F5 /* Cards.swift */; };
+		B778A4F828C7AC91009F29F5 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4F728C7AC91009F29F5 /* Cards.swift */; };
+		B778A4FA28C7AC9E009F29F5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4F928C7AC9E009F29F5 /* Card.swift */; };
+		B778A4FD28C7ADF3009F29F5 /* DispalyedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4FC28C7ADF3009F29F5 /* DispalyedProtocol.swift */; };
+		B778A4FF28C7AF55009F29F5 /* MTGCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4FE28C7AF55009F29F5 /* MTGCell.swift */; };
+		B778A51C28C7B6D6009F29F5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B778A50C28C7B67C009F29F5 /* Alamofire.framework */; };
+		B778A51D28C7B6D6009F29F5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B778A50C28C7B67C009F29F5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B778A50B28C7B67C009F29F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		B778A50D28C7B67C009F29F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B778A51E28C7B6D6009F29F5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B778A51D28C7B6D6009F29F5 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B778A4D128C79F45009F29F5 /* MTG_Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTG_Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,8 +59,11 @@
 		B778A4DD28C79F48009F29F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B778A4E028C79F48009F29F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B778A4E228C79F48009F29F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B778A4F128C7AA91009F29F5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		B778A4F328C7AA9B009F29F5 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		B778A4F728C7AC91009F29F5 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		B778A4F928C7AC9E009F29F5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B778A4FC28C7ADF3009F29F5 /* DispalyedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispalyedProtocol.swift; sourceTree = "<group>"; };
+		B778A4FE28C7AF55009F29F5 /* MTGCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGCell.swift; sourceTree = "<group>"; };
+		B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B778A51C28C7B6D6009F29F5 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +83,7 @@
 			children = (
 				B778A4D328C79F45009F29F5 /* MTG_Cards */,
 				B778A4D228C79F45009F29F5 /* Products */,
+				B778A51B28C7B6D6009F29F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +101,7 @@
 				B778A4E928C7A0A7009F29F5 /* Resources */,
 				B778A4E828C7A09E009F29F5 /* Sources */,
 				B778A4E228C79F48009F29F5 /* Info.plist */,
+				B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */,
 			);
 			path = MTG_Cards;
 			sourceTree = "<group>";
@@ -106,6 +147,7 @@
 		B778A4EC28C7A0EC009F29F5 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B778A4FC28C7ADF3009F29F5 /* DispalyedProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -113,8 +155,8 @@
 		B778A4ED28C7A0F4009F29F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B778A4F128C7AA91009F29F5 /* Card.swift */,
-				B778A4F328C7AA9B009F29F5 /* Cards.swift */,
+				B778A4F728C7AC91009F29F5 /* Cards.swift */,
+				B778A4F928C7AC9E009F29F5 /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,8 +164,25 @@
 		B778A4F028C7A972009F29F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B778A4FE28C7AF55009F29F5 /* MTGCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B778A50128C7B67C009F29F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B778A50C28C7B67C009F29F5 /* Alamofire.framework */,
+				B778A50E28C7B67C009F29F5 /* Alamofire iOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B778A51B28C7B6D6009F29F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +195,7 @@
 				B778A4CD28C79F45009F29F5 /* Sources */,
 				B778A4CE28C79F45009F29F5 /* Frameworks */,
 				B778A4CF28C79F45009F29F5 /* Resources */,
+				B778A51E28C7B6D6009F29F5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,12 +232,35 @@
 			mainGroup = B778A4C828C79F45009F29F5;
 			productRefGroup = B778A4D228C79F45009F29F5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B778A50128C7B67C009F29F5 /* Products */;
+					ProjectRef = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B778A4D028C79F45009F29F5 /* MTG_Cards */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B778A50C28C7B67C009F29F5 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B778A50B28C7B67C009F29F5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B778A50E28C7B67C009F29F5 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = B778A50D28C7B67C009F29F5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B778A4CF28C79F45009F29F5 /* Resources */ = {
@@ -196,11 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B778A4F428C7AA9B009F29F5 /* Cards.swift in Sources */,
+				B778A4FA28C7AC9E009F29F5 /* Card.swift in Sources */,
+				B778A4FD28C7ADF3009F29F5 /* DispalyedProtocol.swift in Sources */,
 				B778A4D928C79F45009F29F5 /* MTGViewController.swift in Sources */,
 				B778A4D528C79F45009F29F5 /* AppDelegate.swift in Sources */,
 				B778A4D728C79F45009F29F5 /* SceneDelegate.swift in Sources */,
-				B778A4F228C7AA91009F29F5 /* Card.swift in Sources */,
+				B778A4FF28C7AF55009F29F5 /* MTGCell.swift in Sources */,
+				B778A4F828C7AC91009F29F5 /* Cards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
