@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		B778A4D528C79F45009F29F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4D428C79F45009F29F5 /* AppDelegate.swift */; };
 		B778A4D728C79F45009F29F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4D628C79F45009F29F5 /* SceneDelegate.swift */; };
-		B778A4D928C79F45009F29F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4D828C79F45009F29F5 /* ViewController.swift */; };
-		B778A4DC28C79F45009F29F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B778A4DA28C79F45009F29F5 /* Main.storyboard */; };
+		B778A4D928C79F45009F29F5 /* MTGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4D828C79F45009F29F5 /* MTGViewController.swift */; };
 		B778A4DE28C79F48009F29F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B778A4DD28C79F48009F29F5 /* Assets.xcassets */; };
 		B778A4E128C79F48009F29F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B778A4DF28C79F48009F29F5 /* LaunchScreen.storyboard */; };
+		B778A4F228C7AA91009F29F5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4F128C7AA91009F29F5 /* Card.swift */; };
+		B778A4F428C7AA9B009F29F5 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4F328C7AA9B009F29F5 /* Cards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B778A4D128C79F45009F29F5 /* MTG_Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTG_Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B778A4D428C79F45009F29F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B778A4D628C79F45009F29F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B778A4D828C79F45009F29F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B778A4DB28C79F45009F29F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B778A4D828C79F45009F29F5 /* MTGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGViewController.swift; sourceTree = "<group>"; };
 		B778A4DD28C79F48009F29F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B778A4E028C79F48009F29F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B778A4E228C79F48009F29F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B778A4F128C7AA91009F29F5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B778A4F328C7AA9B009F29F5 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,72 @@
 		B778A4D328C79F45009F29F5 /* MTG_Cards */ = {
 			isa = PBXGroup;
 			children = (
-				B778A4D428C79F45009F29F5 /* AppDelegate.swift */,
-				B778A4D628C79F45009F29F5 /* SceneDelegate.swift */,
-				B778A4D828C79F45009F29F5 /* ViewController.swift */,
-				B778A4DA28C79F45009F29F5 /* Main.storyboard */,
-				B778A4DD28C79F48009F29F5 /* Assets.xcassets */,
-				B778A4DF28C79F48009F29F5 /* LaunchScreen.storyboard */,
+				B778A4E928C7A0A7009F29F5 /* Resources */,
+				B778A4E828C7A09E009F29F5 /* Sources */,
 				B778A4E228C79F48009F29F5 /* Info.plist */,
 			);
 			path = MTG_Cards;
+			sourceTree = "<group>";
+		};
+		B778A4E828C7A09E009F29F5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B778A4F028C7A972009F29F5 /* Views */,
+				B778A4ED28C7A0F4009F29F5 /* Models */,
+				B778A4EC28C7A0EC009F29F5 /* Protocols */,
+				B778A4EB28C7A0D9009F29F5 /* ViewControllers */,
+				B778A4EA28C7A0B5009F29F5 /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B778A4E928C7A0A7009F29F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B778A4DD28C79F48009F29F5 /* Assets.xcassets */,
+				B778A4DF28C79F48009F29F5 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B778A4EA28C7A0B5009F29F5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B778A4D428C79F45009F29F5 /* AppDelegate.swift */,
+				B778A4D628C79F45009F29F5 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B778A4EB28C7A0D9009F29F5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B778A4D828C79F45009F29F5 /* MTGViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B778A4EC28C7A0EC009F29F5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B778A4ED28C7A0F4009F29F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B778A4F128C7AA91009F29F5 /* Card.swift */,
+				B778A4F328C7AA9B009F29F5 /* Cards.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B778A4F028C7A972009F29F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +186,6 @@
 			files = (
 				B778A4E128C79F48009F29F5 /* LaunchScreen.storyboard in Resources */,
 				B778A4DE28C79F48009F29F5 /* Assets.xcassets in Resources */,
-				B778A4DC28C79F45009F29F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +196,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B778A4D928C79F45009F29F5 /* ViewController.swift in Sources */,
+				B778A4F428C7AA9B009F29F5 /* Cards.swift in Sources */,
+				B778A4D928C79F45009F29F5 /* MTGViewController.swift in Sources */,
 				B778A4D528C79F45009F29F5 /* AppDelegate.swift in Sources */,
 				B778A4D728C79F45009F29F5 /* SceneDelegate.swift in Sources */,
+				B778A4F228C7AA91009F29F5 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B778A4DA28C79F45009F29F5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B778A4DB28C79F45009F29F5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B778A4DF28C79F48009F29F5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +344,6 @@
 				INFOPLIST_FILE = MTG_Cards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +371,6 @@
 				INFOPLIST_FILE = MTG_Cards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
