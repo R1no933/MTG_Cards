@@ -9,10 +9,17 @@ import UIKit
 import Alamofire
 
 class MTGViewController: UIViewController {
+    
+    enum Section { case main }
+    
     //MARK: - Properties
     private var cards: [Card] = []
+    private var filtredCards: [Card] = []
     private var selectedCard: Displayed?
     private let url = "https://api.magicthegathering.io/v1/cards"
+    
+    var dataSource: UITableViewDiffableDataSource<Section, Card>!
+    var isSearching = false
     
     lazy var cardsTableView: UITableView = {
         let tableView = UITableView()
@@ -21,6 +28,7 @@ class MTGViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
+        
         tableView.keyboardDismissMode = .onDrag
         
         return tableView
@@ -32,6 +40,7 @@ class MTGViewController: UIViewController {
         configureView()
         configureSearchController()
         getCardsList()
+        configureDataSource()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,11 +66,32 @@ class MTGViewController: UIViewController {
     private func configureSearchController() {
         let searchController = UISearchController()
         searchController.searchBar.placeholder = "Enter card name"
+        searchController.searchResultsUpdater = self
+        
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
     }
+    
+    //Configure Data Source
+    private func configureDataSource() {
+        dataSource = UITableViewDiffableDataSource<Section, Card>(tableView: cardsTableView, cellProvider: { (tableView, indexPath, card) -> UITableViewCell? in
+            let cell = tableView.dequeueReusableCell(withIdentifier: MTGCell.identifire, for: indexPath) as! MTGCell
+            cell.set(cards: card)
+            return cell
+        })
+    }
+    
+    //Update data
+    private func updateData(on cards: [Card]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Card>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(cards)
+        DispatchQueue.main.async { self.dataSource.apply(snapshot, animatingDifferences: true) }
+    }
 }
 
+//MARK: - Extensions
+//Table view delegate and data source
 extension MTGViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cards.count
@@ -93,7 +123,6 @@ extension MTGViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-//MARK: - Extensions
 //Network call
 extension MTGViewController {
     func getCardsList() {
@@ -103,7 +132,23 @@ extension MTGViewController {
                 guard let data = responce.value else { return }
                 let cards = data.cards
                 self.cards = cards
-                self.cardsTableView.reloadData()
+                self.updateData(on: cards)
             }
     }
 }
+
+//Update search result
+extension MTGViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else {
+            updateData(on: cards)
+            isSearching = false
+            return
+        }
+        
+        isSearching = true
+        filtredCards = cards.filter { $0.nameLabel.lowercased().contains(filter.lowercased()) }
+        updateData(on: filtredCards)
+    }
+}
+

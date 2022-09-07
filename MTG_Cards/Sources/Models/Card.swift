@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Card: Decodable {
+struct Card: Decodable, Hashable {
     private let name: String?
     private let setName: String?
     private let type: String?

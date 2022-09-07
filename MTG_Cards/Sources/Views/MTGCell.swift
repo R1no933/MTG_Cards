@@ -12,33 +12,8 @@ class MTGCell: UITableViewCell {
     //MARK: - Properties
     static let identifire = "MTGCell"
     
-    lazy var cardName: UILabel = {
-        let label = UILabel()
-        
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        label.textColor = .label
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.8
-        label.lineBreakMode = .byTruncatingTail
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
-    
-    lazy var cardType: UILabel = {
-        let label = UILabel()
-        
-        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        label.textColor = .secondaryLabel
-        label.adjustsFontForContentSizeCategory = true
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.65
-        label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 2
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    let cardName = MTGTitleLabel(fontSize: 20)
+    let cardType = MTGBodyLabel(fontSize: 14)
     
     //MARK: - Inits
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -71,7 +46,7 @@ class MTGCell: UITableViewCell {
             
             cardType.topAnchor.constraint(equalTo: cardName.bottomAnchor, constant: Metrics.padding),
             cardType.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.padding),
-            cardType.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            cardType.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.padding),
             cardType.heightAnchor.constraint(equalToConstant: Metrics.setNameHeight)
         ])
     }

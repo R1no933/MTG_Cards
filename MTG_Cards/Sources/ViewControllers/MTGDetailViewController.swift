@@ -19,6 +19,8 @@ class MTGDetailViewController: UIViewController {
     let textLabel = MTGBodyLabel(fontSize: 22)
     let numberLabel = MTGBodyLabel(fontSize: 20)
     
+    var viewsArray: [UIView] = []
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,44 +47,71 @@ class MTGDetailViewController: UIViewController {
         
         view.addSubview(nameLabel)
         view.addSubview(setNameLabel)
-        view.addSubview(typeLabel)
-        view.addSubview(manaCostLabel)
-        view.addSubview(powerLabel)
-        view.addSubview(textLabel)
         view.addSubview(numberLabel)
         
+        viewsArray = [typeLabel, manaCostLabel, powerLabel, textLabel]
+        
+        for views in viewsArray {
+            view.addSubview(views)
+            
+            NSLayoutConstraint.activate([
+                views.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Metrics.cardInfoLeadingAndTrailing),
+                views.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Metrics.cardInfoLeadingAndTrailing)
+            ])
+        }
+        
+    
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            nameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Metrics.nameTop),
             nameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            nameLabel.heightAnchor.constraint(equalToConstant: 30),
+            nameLabel.heightAnchor.constraint(equalToConstant: Metrics.nameHeight),
             
-            setNameLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
+            setNameLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: Metrics.setNameTop),
             setNameLabel.centerXAnchor.constraint(equalTo: nameLabel.centerXAnchor),
-            setNameLabel.heightAnchor.constraint(equalToConstant: 22),
+            setNameLabel.heightAnchor.constraint(equalToConstant: Metrics.setNameHeight),
             
-            typeLabel.topAnchor.constraint(equalTo: setNameLabel.bottomAnchor, constant: 80),
-            typeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            typeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            typeLabel.heightAnchor.constraint(equalToConstant: 22),
+            typeLabel.topAnchor.constraint(equalTo: setNameLabel.bottomAnchor, constant: Metrics.typeTop),
+            typeLabel.heightAnchor.constraint(equalToConstant: Metrics.cardInfoHeight),
             
-            manaCostLabel.topAnchor.constraint(equalTo: typeLabel.bottomAnchor, constant: 10),
-            manaCostLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            manaCostLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            manaCostLabel.heightAnchor.constraint(equalToConstant: 22),
+            manaCostLabel.topAnchor.constraint(equalTo: typeLabel.bottomAnchor, constant: Metrics.manaCostTop),
+            manaCostLabel.heightAnchor.constraint(equalToConstant: Metrics.cardInfoHeight),
             
-            powerLabel.topAnchor.constraint(equalTo: manaCostLabel.bottomAnchor, constant: 10),
-            powerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            powerLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            powerLabel.heightAnchor.constraint(equalToConstant: 22),
+            powerLabel.topAnchor.constraint(equalTo: manaCostLabel.bottomAnchor, constant: Metrics.powerTop),
+            powerLabel.heightAnchor.constraint(equalToConstant: Metrics.cardInfoHeight),
             
-            textLabel.topAnchor.constraint(equalTo: powerLabel.bottomAnchor, constant: 40),
-            textLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            textLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            textLabel.heightAnchor.constraint(equalToConstant: 200),
+            textLabel.topAnchor.constraint(equalTo: powerLabel.bottomAnchor, constant: Metrics.textTop),
+            textLabel.heightAnchor.constraint(equalToConstant: Metrics.textHeight),
             
-            numberLabel.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 40),
+            numberLabel.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: Metrics.numberTop),
             numberLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            numberLabel.heightAnchor.constraint(equalToConstant: 40)
+            numberLabel.heightAnchor.constraint(equalToConstant: Metrics.numberHeight)
         ])
+    }
+}
+
+//MARK: - Extension
+//Matrics
+extension MTGDetailViewController {
+    enum Metrics {
+        static let nameTop: CGFloat = 30
+        static let nameHeight: CGFloat = 32
+        
+        static let setNameTop: CGFloat = 5
+        static let setNameHeight: CGFloat = 28
+        
+        static let typeTop: CGFloat = 50
+        
+        static let manaCostTop: CGFloat = 10
+        
+        static let powerTop: CGFloat = 10
+        
+        static let textTop: CGFloat = 60
+        static let textHeight: CGFloat = 200
+        
+        static let numberTop: CGFloat = 100
+        static let numberHeight: CGFloat = 40
+        
+        static let cardInfoLeadingAndTrailing: CGFloat = 20
+        static let cardInfoHeight: CGFloat = 24
     }
 }
