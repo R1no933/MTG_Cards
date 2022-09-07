@@ -18,6 +18,7 @@ struct Card: Decodable {
 }
 
 extension Card: Displayed {
+    
     var nameLabel: String {
         guard let name = name else {
             return "Card hasn't name"
@@ -57,7 +58,7 @@ extension Card: Displayed {
         guard let text = text else {
             return "Card hasn't description"
         }
-        return String("Card text: \(text)")
+        return String("Card description:\n\(text)")
     }
     
     var numberLabel: String {

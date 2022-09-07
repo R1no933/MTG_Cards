@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B713FB9D28C889B400B559B9 /* MTGDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713FB9C28C889B400B559B9 /* MTGDetailViewController.swift */; };
+		B713FBB328C88D7600B559B9 /* MTGTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713FBB228C88D7600B559B9 /* MTGTitleLabel.swift */; };
+		B713FBB528C88F1A00B559B9 /* MTGBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713FBB428C88F1A00B559B9 /* MTGBodyLabel.swift */; };
 		B778A4D528C79F45009F29F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4D428C79F45009F29F5 /* AppDelegate.swift */; };
 		B778A4D728C79F45009F29F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4D628C79F45009F29F5 /* SceneDelegate.swift */; };
 		B778A4D928C79F45009F29F5 /* MTGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4D828C79F45009F29F5 /* MTGViewController.swift */; };
@@ -21,6 +24,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B713FBA628C889B400B559B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		B713FBA828C889B400B559B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		B713FBAA28C889B400B559B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		B713FBAC28C889B400B559B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		B713FBAE28C889B400B559B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		B713FBB028C889B400B559B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 31293065263E17D600473CEA;
+			remoteInfo = "Alamofire watchOS Tests";
+		};
 		B778A50B28C7B67C009F29F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
@@ -52,6 +97,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B713FB9C28C889B400B559B9 /* MTGDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGDetailViewController.swift; sourceTree = "<group>"; };
+		B713FBB228C88D7600B559B9 /* MTGTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGTitleLabel.swift; sourceTree = "<group>"; };
+		B713FBB428C88F1A00B559B9 /* MTGBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGBodyLabel.swift; sourceTree = "<group>"; };
 		B778A4D128C79F45009F29F5 /* MTG_Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTG_Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B778A4D428C79F45009F29F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B778A4D628C79F45009F29F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				B778A4D828C79F45009F29F5 /* MTGViewController.swift */,
+				B713FB9C28C889B400B559B9 /* MTGDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -165,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				B778A4FE28C7AF55009F29F5 /* MTGCell.swift */,
+				B713FBB228C88D7600B559B9 /* MTGTitleLabel.swift */,
+				B713FBB428C88F1A00B559B9 /* MTGBodyLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +225,12 @@
 			children = (
 				B778A50C28C7B67C009F29F5 /* Alamofire.framework */,
 				B778A50E28C7B67C009F29F5 /* Alamofire iOS Tests.xctest */,
+				B713FBA728C889B400B559B9 /* Alamofire.framework */,
+				B713FBA928C889B400B559B9 /* Alamofire macOS Tests.xctest */,
+				B713FBAB28C889B400B559B9 /* Alamofire.framework */,
+				B713FBAD28C889B400B559B9 /* Alamofire tvOS Tests.xctest */,
+				B713FBAF28C889B400B559B9 /* Alamofire.framework */,
+				B713FBB128C889B400B559B9 /* Alamofire watchOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,6 +303,48 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		B713FBA728C889B400B559B9 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B713FBA628C889B400B559B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B713FBA928C889B400B559B9 /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = B713FBA828C889B400B559B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B713FBAB28C889B400B559B9 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B713FBAA28C889B400B559B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B713FBAD28C889B400B559B9 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = B713FBAC28C889B400B559B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B713FBAF28C889B400B559B9 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B713FBAE28C889B400B559B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B713FBB128C889B400B559B9 /* Alamofire watchOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire watchOS Tests.xctest";
+			remoteRef = B713FBB028C889B400B559B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		B778A50C28C7B67C009F29F5 /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -281,11 +380,14 @@
 			files = (
 				B778A4FA28C7AC9E009F29F5 /* Card.swift in Sources */,
 				B778A4FD28C7ADF3009F29F5 /* DispalyedProtocol.swift in Sources */,
+				B713FB9D28C889B400B559B9 /* MTGDetailViewController.swift in Sources */,
 				B778A4D928C79F45009F29F5 /* MTGViewController.swift in Sources */,
 				B778A4D528C79F45009F29F5 /* AppDelegate.swift in Sources */,
 				B778A4D728C79F45009F29F5 /* SceneDelegate.swift in Sources */,
 				B778A4FF28C7AF55009F29F5 /* MTGCell.swift in Sources */,
+				B713FBB328C88D7600B559B9 /* MTGTitleLabel.swift in Sources */,
 				B778A4F828C7AC91009F29F5 /* Cards.swift in Sources */,
+				B713FBB528C88F1A00B559B9 /* MTGBodyLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

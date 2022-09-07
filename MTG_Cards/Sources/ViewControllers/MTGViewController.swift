@@ -11,6 +11,7 @@ import Alamofire
 class MTGViewController: UIViewController {
     //MARK: - Properties
     private var cards: [Card] = []
+    private var selectedCard: Displayed?
     private let url = "https://api.magicthegathering.io/v1/cards"
     
     lazy var cardsTableView: UITableView = {
@@ -75,10 +76,21 @@ extension MTGViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 60
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cardsTableView.deselectRow(at: indexPath, animated: true)
+        let detailViewController = MTGDetailViewController()
+        detailViewController.card = selectedCard
+        navigationController?.pushViewController(detailViewController, animated: true)
+        
+    }
     
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        selectedCard = cards[indexPath.row]
+        return indexPath
+    }
 }
 
 //MARK: - Extensions
