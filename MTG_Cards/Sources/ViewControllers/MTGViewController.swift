@@ -14,7 +14,6 @@ class MTGViewController: UIViewController {
     
     //MARK: - Properties
     private var cards: [Card] = []
-    private var filtredCards: [Card] = []
     private var selectedCard: Displayed?
     private let url = "https://api.magicthegathering.io/v1/cards"
     
@@ -22,7 +21,7 @@ class MTGViewController: UIViewController {
     var isSearching = false
     
     lazy var cardsTableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: view.bounds)
         
         tableView.register(MTGCell.self, forCellReuseIdentifier: MTGCell.identifire)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,11 +41,7 @@ class MTGViewController: UIViewController {
         getCardsList()
         configureDataSource()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
+      
     //MARK: Methods
     //Configure view
     private func configureView() {
@@ -54,12 +49,6 @@ class MTGViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         view.addSubview(cardsTableView)
-        NSLayoutConstraint.activate([
-            cardsTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            cardsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            cardsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            cardsTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        ])
     }
     
     //Configure search controller
@@ -147,7 +136,7 @@ extension MTGViewController: UISearchResultsUpdating {
         }
         
         isSearching = true
-        filtredCards = cards.filter { $0.nameLabel.lowercased().contains(filter.lowercased()) }
+        let filtredCards = cards.filter { $0.nameLabel.lowercased().contains(filter.lowercased()) }
         updateData(on: filtredCards)
     }
 }

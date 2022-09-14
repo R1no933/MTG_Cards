@@ -11,13 +11,13 @@ class MTGDetailViewController: UIViewController {
     
     //MARK: - Properties
     var card: Displayed?
-    let nameLabel = MTGTitleLabel(fontSize: 30)
-    let setNameLabel = MTGTitleLabel(fontSize: 26)
-    let typeLabel = MTGBodyLabel(fontSize: 24)
-    let manaCostLabel = MTGBodyLabel(fontSize: 24)
-    let powerLabel = MTGBodyLabel(fontSize: 24)
-    let textLabel = MTGBodyLabel(fontSize: 22)
-    let numberLabel = MTGBodyLabel(fontSize: 20)
+    private let nameLabel = MTGTitleLabel(fontSize: 30)
+    private let setNameLabel = MTGTitleLabel(fontSize: 26)
+    private let typeLabel = MTGBodyLabel(fontSize: 24)
+    private let manaCostLabel = MTGBodyLabel(fontSize: 24)
+    private let powerLabel = MTGBodyLabel(fontSize: 24)
+    private let textLabel = MTGBodyLabel(fontSize: 22)
+    private let numberLabel = MTGBodyLabel(fontSize: 20)
     
     var viewsArray: [UIView] = []
     
