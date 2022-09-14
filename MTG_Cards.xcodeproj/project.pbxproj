@@ -7,23 +7,111 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B713FB9D28C889B400B559B9 /* MTGDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713FB9C28C889B400B559B9 /* MTGDetailViewController.swift */; };
+		B713FBB328C88D7600B559B9 /* MTGTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713FBB228C88D7600B559B9 /* MTGTitleLabel.swift */; };
+		B713FBB528C88F1A00B559B9 /* MTGBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713FBB428C88F1A00B559B9 /* MTGBodyLabel.swift */; };
 		B778A4D528C79F45009F29F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4D428C79F45009F29F5 /* AppDelegate.swift */; };
 		B778A4D728C79F45009F29F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4D628C79F45009F29F5 /* SceneDelegate.swift */; };
-		B778A4D928C79F45009F29F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4D828C79F45009F29F5 /* ViewController.swift */; };
-		B778A4DC28C79F45009F29F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B778A4DA28C79F45009F29F5 /* Main.storyboard */; };
+		B778A4D928C79F45009F29F5 /* MTGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4D828C79F45009F29F5 /* MTGViewController.swift */; };
 		B778A4DE28C79F48009F29F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B778A4DD28C79F48009F29F5 /* Assets.xcassets */; };
 		B778A4E128C79F48009F29F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B778A4DF28C79F48009F29F5 /* LaunchScreen.storyboard */; };
+		B778A4F828C7AC91009F29F5 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4F728C7AC91009F29F5 /* Cards.swift */; };
+		B778A4FA28C7AC9E009F29F5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4F928C7AC9E009F29F5 /* Card.swift */; };
+		B778A4FD28C7ADF3009F29F5 /* DispalyedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4FC28C7ADF3009F29F5 /* DispalyedProtocol.swift */; };
+		B778A4FF28C7AF55009F29F5 /* MTGCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778A4FE28C7AF55009F29F5 /* MTGCell.swift */; };
+		B778A51C28C7B6D6009F29F5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B778A50C28C7B67C009F29F5 /* Alamofire.framework */; };
+		B778A51D28C7B6D6009F29F5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B778A50C28C7B67C009F29F5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B713FBA628C889B400B559B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		B713FBA828C889B400B559B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		B713FBAA28C889B400B559B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		B713FBAC28C889B400B559B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		B713FBAE28C889B400B559B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		B713FBB028C889B400B559B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 31293065263E17D600473CEA;
+			remoteInfo = "Alamofire watchOS Tests";
+		};
+		B778A50B28C7B67C009F29F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		B778A50D28C7B67C009F29F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B778A51E28C7B6D6009F29F5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B778A51D28C7B6D6009F29F5 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B713FB9C28C889B400B559B9 /* MTGDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGDetailViewController.swift; sourceTree = "<group>"; };
+		B713FBB228C88D7600B559B9 /* MTGTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGTitleLabel.swift; sourceTree = "<group>"; };
+		B713FBB428C88F1A00B559B9 /* MTGBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGBodyLabel.swift; sourceTree = "<group>"; };
 		B778A4D128C79F45009F29F5 /* MTG_Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTG_Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B778A4D428C79F45009F29F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B778A4D628C79F45009F29F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B778A4D828C79F45009F29F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B778A4DB28C79F45009F29F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B778A4D828C79F45009F29F5 /* MTGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGViewController.swift; sourceTree = "<group>"; };
 		B778A4DD28C79F48009F29F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B778A4E028C79F48009F29F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B778A4E228C79F48009F29F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B778A4F728C7AC91009F29F5 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		B778A4F928C7AC9E009F29F5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B778A4FC28C7ADF3009F29F5 /* DispalyedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispalyedProtocol.swift; sourceTree = "<group>"; };
+		B778A4FE28C7AF55009F29F5 /* MTGCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGCell.swift; sourceTree = "<group>"; };
+		B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B778A51C28C7B6D6009F29F5 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +131,7 @@
 			children = (
 				B778A4D328C79F45009F29F5 /* MTG_Cards */,
 				B778A4D228C79F45009F29F5 /* Products */,
+				B778A51B28C7B6D6009F29F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +146,100 @@
 		B778A4D328C79F45009F29F5 /* MTG_Cards */ = {
 			isa = PBXGroup;
 			children = (
-				B778A4D428C79F45009F29F5 /* AppDelegate.swift */,
-				B778A4D628C79F45009F29F5 /* SceneDelegate.swift */,
-				B778A4D828C79F45009F29F5 /* ViewController.swift */,
-				B778A4DA28C79F45009F29F5 /* Main.storyboard */,
-				B778A4DD28C79F48009F29F5 /* Assets.xcassets */,
-				B778A4DF28C79F48009F29F5 /* LaunchScreen.storyboard */,
+				B778A4E928C7A0A7009F29F5 /* Resources */,
+				B778A4E828C7A09E009F29F5 /* Sources */,
 				B778A4E228C79F48009F29F5 /* Info.plist */,
+				B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */,
 			);
 			path = MTG_Cards;
+			sourceTree = "<group>";
+		};
+		B778A4E828C7A09E009F29F5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B778A4F028C7A972009F29F5 /* Views */,
+				B778A4ED28C7A0F4009F29F5 /* Models */,
+				B778A4EC28C7A0EC009F29F5 /* Protocols */,
+				B778A4EB28C7A0D9009F29F5 /* ViewControllers */,
+				B778A4EA28C7A0B5009F29F5 /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B778A4E928C7A0A7009F29F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B778A4DD28C79F48009F29F5 /* Assets.xcassets */,
+				B778A4DF28C79F48009F29F5 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B778A4EA28C7A0B5009F29F5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B778A4D428C79F45009F29F5 /* AppDelegate.swift */,
+				B778A4D628C79F45009F29F5 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B778A4EB28C7A0D9009F29F5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B778A4D828C79F45009F29F5 /* MTGViewController.swift */,
+				B713FB9C28C889B400B559B9 /* MTGDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B778A4EC28C7A0EC009F29F5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B778A4FC28C7ADF3009F29F5 /* DispalyedProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B778A4ED28C7A0F4009F29F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B778A4F728C7AC91009F29F5 /* Cards.swift */,
+				B778A4F928C7AC9E009F29F5 /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B778A4F028C7A972009F29F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B778A4FE28C7AF55009F29F5 /* MTGCell.swift */,
+				B713FBB228C88D7600B559B9 /* MTGTitleLabel.swift */,
+				B713FBB428C88F1A00B559B9 /* MTGBodyLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B778A50128C7B67C009F29F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B778A50C28C7B67C009F29F5 /* Alamofire.framework */,
+				B778A50E28C7B67C009F29F5 /* Alamofire iOS Tests.xctest */,
+				B713FBA728C889B400B559B9 /* Alamofire.framework */,
+				B713FBA928C889B400B559B9 /* Alamofire macOS Tests.xctest */,
+				B713FBAB28C889B400B559B9 /* Alamofire.framework */,
+				B713FBAD28C889B400B559B9 /* Alamofire tvOS Tests.xctest */,
+				B713FBAF28C889B400B559B9 /* Alamofire.framework */,
+				B713FBB128C889B400B559B9 /* Alamofire watchOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B778A51B28C7B6D6009F29F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +252,7 @@
 				B778A4CD28C79F45009F29F5 /* Sources */,
 				B778A4CE28C79F45009F29F5 /* Frameworks */,
 				B778A4CF28C79F45009F29F5 /* Resources */,
+				B778A51E28C7B6D6009F29F5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -113,12 +289,77 @@
 			mainGroup = B778A4C828C79F45009F29F5;
 			productRefGroup = B778A4D228C79F45009F29F5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B778A50128C7B67C009F29F5 /* Products */;
+					ProjectRef = B778A50028C7B67C009F29F5 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B778A4D028C79F45009F29F5 /* MTG_Cards */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B713FBA728C889B400B559B9 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B713FBA628C889B400B559B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B713FBA928C889B400B559B9 /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = B713FBA828C889B400B559B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B713FBAB28C889B400B559B9 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B713FBAA28C889B400B559B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B713FBAD28C889B400B559B9 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = B713FBAC28C889B400B559B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B713FBAF28C889B400B559B9 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B713FBAE28C889B400B559B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B713FBB128C889B400B559B9 /* Alamofire watchOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire watchOS Tests.xctest";
+			remoteRef = B713FBB028C889B400B559B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B778A50C28C7B67C009F29F5 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B778A50B28C7B67C009F29F5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B778A50E28C7B67C009F29F5 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = B778A50D28C7B67C009F29F5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B778A4CF28C79F45009F29F5 /* Resources */ = {
@@ -127,7 +368,6 @@
 			files = (
 				B778A4E128C79F48009F29F5 /* LaunchScreen.storyboard in Resources */,
 				B778A4DE28C79F48009F29F5 /* Assets.xcassets in Resources */,
-				B778A4DC28C79F45009F29F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +378,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B778A4D928C79F45009F29F5 /* ViewController.swift in Sources */,
+				B778A4FA28C7AC9E009F29F5 /* Card.swift in Sources */,
+				B778A4FD28C7ADF3009F29F5 /* DispalyedProtocol.swift in Sources */,
+				B713FB9D28C889B400B559B9 /* MTGDetailViewController.swift in Sources */,
+				B778A4D928C79F45009F29F5 /* MTGViewController.swift in Sources */,
 				B778A4D528C79F45009F29F5 /* AppDelegate.swift in Sources */,
 				B778A4D728C79F45009F29F5 /* SceneDelegate.swift in Sources */,
+				B778A4FF28C7AF55009F29F5 /* MTGCell.swift in Sources */,
+				B713FBB328C88D7600B559B9 /* MTGTitleLabel.swift in Sources */,
+				B778A4F828C7AC91009F29F5 /* Cards.swift in Sources */,
+				B713FBB528C88F1A00B559B9 /* MTGBodyLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B778A4DA28C79F45009F29F5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B778A4DB28C79F45009F29F5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B778A4DF28C79F48009F29F5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +531,6 @@
 				INFOPLIST_FILE = MTG_Cards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +558,6 @@
 				INFOPLIST_FILE = MTG_Cards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
